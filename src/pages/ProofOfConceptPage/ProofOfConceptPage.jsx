@@ -1,4 +1,4 @@
-import './ProofOfConcept.scss'
+import './ProofOfConceptPage.scss'
 
 function ProofOfConceptPage() {
   return (
@@ -8,4 +8,4 @@ function ProofOfConceptPage() {
   )
 }
 
-export default ProofOfConceptPagePage();
+export default ProofOfConceptPage;
