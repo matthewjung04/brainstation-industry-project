@@ -1,0 +1,29 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/colors' as *;
+
+.header {
+  background-color: $header-background;
+
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    &__dropdown {
+      background-color: $header-background;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-family: Roboto-Medium;
+    color: $header-font;
+    margin-right: 34.5rem;
+  }
+}
