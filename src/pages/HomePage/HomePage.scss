@@ -2,40 +2,106 @@
 @use '../../styles/partials/fonts' as *;
 
 #selection {
-  font-family: Roboto-Regular;
-  font-size: 20px;
+  &--consumer {
+    font-family: Roboto-Regular;
+    font-size: 20px;
+  
+    background-color: $buttons;
+    color: $alternate-font-color;
+    width: 20rem;
+    height: 4rem;
+  
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 
-  background-color: $buttons;
-  color: $buttons-outline;
-  width: 20rem;
-  height: 4rem;
-
-  margin: 0.5rem;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $buttons-hover;
+    &:hover {
+      background-color: $buttons-hover;
+    }
   }
+  &--seller {
+    @extend #selection--consumer;
+  }
+  &--product-inspector {
+    @extend #selection--consumer;
+  }
+
 }
 
 .homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
 
-  margin-top: 2.5rem;
-  margin-left: 4rem;
-
-  &__title {
-    font-family: Roboto-Regular;
-    margin-bottom: 1rem;
-  }
-
-  &__buttons {
+  &__main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+
+    margin-top: 2.5rem;
+    margin-left: 4rem;
+
+    &__title {
+      font-family: Roboto-Regular;
+      margin-bottom: 1rem;
+    }
+  
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &--consumer {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &--seller {
+        @extend .homepage__main__buttons--consumer;
+      }
+
+      &--product-inspector {
+        @extend .homepage__main__buttons--consumer;
+      }
+
+      &__text {
+        &--consumer {
+          // display: none;
+          font-family: Roboto-Regular;
+          color: $alternate-font-color;
+          width: 55vw;
+          padding: 0.5rem;
+          margin-left: 1.5rem;
+          border-radius: 6px;
+
+          background-color: $font-color;
+          z-index: 1;
+
+          position: absolute;
+          left: 27%;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 30%;
+            right: 100%;
+            margin-top: -0.3rem;
+            border-width: 1rem;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+          }
+
+        }
+
+        &--seller {
+          @extend .homepage__main__buttons__text--consumer;
+        }
+
+        &--product-inspector {
+          @extend .homepage__main__buttons__text--consumer;
+        }
+      }
+    }
   }
 }
