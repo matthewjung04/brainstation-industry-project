@@ -3,39 +3,25 @@ import { Link } from 'react-router-dom';
 import { description } from '../../utils/utils';
 import './HomePage.scss'
 
-function HomePage() {
-  let [desc, setDesc] = useState('');
-  
+function HomePage() {  
   const hoverHandler = (e) => {
     const id = e.target.id;
-    var popup = document.getElementById('modal')
-    console.log(popup)
 
     if(id == 'selection--consumer') {
-      const descID = 'consumer';
-      const popupDesc = description.find((desc) => desc.id == descID);
-      
-      setDesc(popupDesc.description);
-      popup.style.marginTop = "-4rem";
+      document.getElementById('consumer').style.display = 'block';
 
     } else if(id == 'selection--seller') {
-      const descID = 'seller';
-      const popupDesc = description.find((desc) => desc.id == descID);
-
-      setDesc(popupDesc.description);
-      popup.style.marginTop = "6rem";
+      document.getElementById('seller').style.display = 'block';
 
     } else if(id == 'selection--product-inspector') {
-      const descID = 'product-inspector';
-      const popupDesc = description.find((desc) => desc.id == descID);
-
-      setDesc(popupDesc.description);
-      popup.style.marginTop = "16rem";
+      document.getElementById('product-inspector').style.display = 'block';
     }
   }
 
   const hoverExitHandler = () => {
-    setDesc('');
+    document.getElementById('consumer').style.display = 'none';
+    document.getElementById('seller').style.display = 'none';
+    document.getElementById('product-inspector').style.display = 'none';
   }
   
   return (
@@ -52,7 +38,7 @@ function HomePage() {
                 onMouseOut={hoverExitHandler}
               >Consumer</button>
             </Link>
-            <p className='homepage__main__buttons__text--consumer'>{description[0].description}</p>
+            <p className='homepage__main__buttons__text--consumer' id='consumer'>{description[0].description}</p>
           </div>
           <div className='homepage__main__buttons--seller'>
             <Link to='/seller'>
@@ -63,7 +49,7 @@ function HomePage() {
                 onMouseOut={hoverExitHandler}
               >Seller</button>
             </Link>
-            <p className='homepage__main__buttons__text--seller'>{description[1].description}</p>
+            <p className='homepage__main__buttons__text--seller' id='seller'>{description[1].description}</p>
           </div>
           <div className='homepage__main__buttons--product-inspector'>
             <Link to='/product-inspector' id='links--product-inspector'>
@@ -74,7 +60,7 @@ function HomePage() {
                 onMouseOut={hoverExitHandler}
               >Product Inspector</button>
             </Link>
-            <p className='homepage__main__buttons__text--product-inspector'>{description[2].description}</p>
+            <p className='homepage__main__buttons__text--product-inspector' id='product-inspector'>{description[2].description}</p>
           </div>
         </div>
       </article>
