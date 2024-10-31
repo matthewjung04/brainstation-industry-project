@@ -1,6 +1,8 @@
+@use './styles/partials/colors' as *;
 @use './styles/partials/fonts' as *;
 
 body {
+  background-color: $web-background;
   font-family: Roboto-Regular;
   margin: 0;
 }

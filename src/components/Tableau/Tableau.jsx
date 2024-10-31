@@ -1,9 +1,8 @@
-import './MainPage.scss'
+import './Tableau.scss'
 
-function MainPage() {
+function Tableau() {
   return (
     <>
-      <h1>Main Page</h1>
       <div>
         <tableau-viz id="tableauViz"       
           src='https://public.tableau.com/views/VGContest_SuperSampleSuperstore_RyanSleeper/SuperDescriptive?:embed=y&:sid=&:redirect=auth&:embed_code_version=3&:loadOrderID=0&:display_count=y&:origin=viz_share_link'
@@ -14,4 +13,4 @@ function MainPage() {
   )
 }
 
-export default MainPage;
+export default Tableau;
