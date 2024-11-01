@@ -4,10 +4,11 @@
 .header {
   background-color: $header-background;
 
-  padding: 0 1rem;
+  padding: 0 2rem;
 
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 
   &__title {
@@ -18,12 +19,19 @@
   }
 
   &__nav {
+    width: 27vw;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 
-    &__dropdown {
-      background-color: $header-background;
-      border: none;
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      font-family: Roboto-Medium;
+      color: $font-color;
+      text-decoration: none;
       cursor: pointer;
     }
   }

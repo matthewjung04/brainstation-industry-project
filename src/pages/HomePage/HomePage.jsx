@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { description } from '../../utils/utils';
+import cartoon from '../../assets/images/survey-cartoon.jpg'
 import './HomePage.scss'
 
 function HomePage() {  
@@ -10,9 +10,6 @@ function HomePage() {
     if(id == 'selection--consumer') {
       document.getElementById('consumer').style.display = 'block';
 
-    } else if(id == 'selection--seller') {
-      document.getElementById('seller').style.display = 'block';
-
     } else if(id == 'selection--product-inspector') {
       document.getElementById('product-inspector').style.display = 'block';
     }
@@ -20,7 +17,6 @@ function HomePage() {
 
   const hoverExitHandler = () => {
     document.getElementById('consumer').style.display = 'none';
-    document.getElementById('seller').style.display = 'none';
     document.getElementById('product-inspector').style.display = 'none';
   }
   
@@ -30,26 +26,15 @@ function HomePage() {
         <h1 className='homepage__main__title'>Please choose one of the following:</h1>
         <div className='homepage__main__buttons'>
           <div className='homepage__main__buttons--consumer'>
-            <Link to='/consumer'>
+            <Link to='/consumer-seller'>
               <button 
                 type='button' 
                 id='selection--consumer'
                 onMouseOver={hoverHandler}
                 onMouseOut={hoverExitHandler}
-              >Consumer</button>
+              >Consumers & Sellers</button>
             </Link>
             <p className='homepage__main__buttons__text--consumer' id='consumer'>{description[0].description}</p>
-          </div>
-          <div className='homepage__main__buttons--seller'>
-            <Link to='/seller'>
-              <button 
-                type='button' 
-                id='selection--seller'
-                onMouseOver={hoverHandler}
-                onMouseOut={hoverExitHandler}
-              >Seller</button>
-            </Link>
-            <p className='homepage__main__buttons__text--seller' id='seller'>{description[1].description}</p>
           </div>
           <div className='homepage__main__buttons--product-inspector'>
             <Link to='/product-inspector' id='links--product-inspector'>
@@ -58,11 +43,12 @@ function HomePage() {
                 id='selection--product-inspector'
                 onMouseOver={hoverHandler}
                 onMouseOut={hoverExitHandler}
-              >Product Inspector</button>
+              >Product Inspectors</button>
             </Link>
-            <p className='homepage__main__buttons__text--product-inspector' id='product-inspector'>{description[2].description}</p>
+            <p className='homepage__main__buttons__text--product-inspector' id='product-inspector'>{description[1].description}</p>
           </div>
         </div>
+        <img src={cartoon} alt='cartoon image' id='cartoon'/>
       </article>
     </section>
   )

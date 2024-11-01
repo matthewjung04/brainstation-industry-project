@@ -29,7 +29,15 @@
 
 }
 
+#cartoon {
+  position:fixed;
+  left: 58vw;
+  top: 48vh;
+  width: 36vw;
+}
+
 .homepage {
+  width: 25vw;
   display:flex;
   flex-direction: row;
   align-items:center;
@@ -73,7 +81,7 @@
           width: 55vw;
           padding: 0.5rem;
           margin-left: 1.5rem;
-          border-radius: 6px;
+          border-radius: 0.75rem;
 
           background-color: $font-color;
           z-index: 1;
@@ -87,7 +95,7 @@
             top: 30%;
             right: 100%;
             margin-top: -0.3rem;
-            border-width: 1rem;
+            border-width: 0.9rem;
             border-style: solid;
             border-color: transparent black transparent transparent;
           }
