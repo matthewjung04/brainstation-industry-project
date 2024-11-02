@@ -23,7 +23,7 @@
   &--seller {
     @extend #selection--consumer;
   }
-  &--product-inspector {
+  &--monitoring-dashboard {
     @extend #selection--consumer;
   }
 
@@ -75,7 +75,7 @@ p.footnote {
         @extend .homepage__main__buttons--consumer;
       }
 
-      &--product-inspector {
+      &--monitoring-dashboard {
         @extend .homepage__main__buttons--consumer;
       }
 
@@ -93,7 +93,8 @@ p.footnote {
           z-index: 1;
 
           position: absolute;
-          left: 27%;
+          margin-left: 22rem;
+         
 
           &::after {
             content: '';
@@ -112,8 +113,18 @@ p.footnote {
           @extend .homepage__main__buttons__text--consumer;
         }
 
-        &--product-inspector {
+        &--monitoring-dashboard {
           @extend .homepage__main__buttons__text--consumer;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 30%;
+            right: 100%;
+            margin-top: -0.06rem;
+            border-width: 0.6rem;
+       
+          }
         }
       }
     }

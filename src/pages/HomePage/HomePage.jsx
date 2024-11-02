@@ -10,14 +10,14 @@ function HomePage() {
     if(id == 'selection--consumer') {
       document.getElementById('consumer').style.display = 'block';
 
-    } else if(id == 'selection--product-inspector') {
-      document.getElementById('product-inspector').style.display = 'block';
+    } else if(id == 'selection--monitoring-dashboard') {
+      document.getElementById('monitoring-dashboard').style.display = 'block';
     }
   }
 
   const hoverExitHandler = () => {
     document.getElementById('consumer').style.display = 'none';
-    document.getElementById('product-inspector').style.display = 'none';
+    document.getElementById('monitoring-dashboard').style.display = 'none';
   }
   
   return (
@@ -36,16 +36,16 @@ function HomePage() {
             </Link>
             <p className='homepage__main__buttons__text--consumer' id='consumer'>{description[0].description}</p>
           </div>
-          <div className='homepage__main__buttons--product-inspector'>
-            <Link to='/product-inspector' id='links--product-inspector'>
+          <div className='homepage__main__buttons--monitoring-dashboard'>
+            <Link to='/monitoring-dashboard' id='links--monitoring-dashboard'>
               <button 
                 type='button'
-                id='selection--product-inspector'
+                id='selection--monitoring-dashboard'
                 onMouseOver={hoverHandler}
                 onMouseOut={hoverExitHandler}
-              >Product Inspectors</button>
+              >Monitoring Dashboard</button>
             </Link>
-            <p className='homepage__main__buttons__text--product-inspector' id='product-inspector'>{description[1].description}</p>
+            <p className='homepage__main__buttons__text--monitoring-dashboard' id='monitoring-dashboard'>{description[1].description}</p>
           </div>
         </div>
         <p className='footnote'><sup>1</sup>This webapp is only a demonstration and will have limited user selections</p>

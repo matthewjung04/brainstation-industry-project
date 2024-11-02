@@ -12,15 +12,21 @@ function ConsumerSellerPage() {
   const navigate = useNavigate();
   
   let [selection, setSelection] = useState('');
+  let [hasLoaded, setHasLoaded] = useState(false);
 
   const submitForm = (e) => {
     e.preventDefault();
-    setSelection(selection=e.target.dataModel.value);
+    setSelection(selection=e.target.value);
   }
 
   useEffect(() => {
     navigate(`/consumer-seller/${selection}`)
   },[selection])
+
+  useEffect(() => {
+    setHasLoaded(true);
+    navigate(`/consumer-seller/${data}`);
+  },[data])
 
   return (
     <>
@@ -28,14 +34,14 @@ function ConsumerSellerPage() {
         submit={submitForm}
       />
 
-      {data=='tableau-dashboard' && selection ? (
+      {data=='tableau-dashboard' && hasLoaded ? (
         <ConsumerSellerTableau />
-      ) : data=='pros-and-cons' && selection ? (
+      ) : data=='pros-and-cons' && hasLoaded ? (
         <ConsumerSellerProsAndCons /> 
-      ): data=='top-reviews' && selection ? (
+      ): data=='top-reviews' && hasLoaded ? (
         <ConsumerSellerTopReviews />
       ): (
-        ''
+        <h3>No Data Type Selected</h3>
       )}
 
 

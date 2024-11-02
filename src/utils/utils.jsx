@@ -6,8 +6,7 @@ export const description = [
   },
 
   {
-    id: 'product-inspector',
-    description: 'This section is for product inspectors who want a full analysis on items sold on Amazon. This section\
-    provides you with a complete statistical analysis of the item being inspected using an interactable tableau dashboard'
+    id: 'monitoring-dashboard',
+    description: 'This section provides a full analysis on items sold on Amazon using an interactable tableau dashboard'
   }
 ]

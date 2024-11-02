@@ -29,10 +29,14 @@
     justify-content: space-around;
 
     &__menu {
+      display: flex;
+
       &__item {
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: 15vw;
+        padding-bottom: 0.2rem;
   
         font-family: Roboto-Medium;
         color: $alternate-font-color;
@@ -43,7 +47,9 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          width: 10vw;
           padding: 0.25rem 0.5rem;
+          margin-top: 1.75rem;
 
           display: none;
           position: absolute;
