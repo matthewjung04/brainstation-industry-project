@@ -4,7 +4,7 @@ function ConsumerSellerTopReviews() {
 
   return (
     <>
-      <h1>ConsumerSeller Top Reviews</h1>
+      <h1>Consumer Seller Top Reviews</h1>
     </>
   )
 }
