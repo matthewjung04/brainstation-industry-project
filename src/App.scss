@@ -5,4 +5,6 @@ body {
   background-color: $web-background;
   font-family: Roboto-Regular;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
