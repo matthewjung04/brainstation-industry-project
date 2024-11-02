@@ -22,17 +22,43 @@
     width: 27vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
-    &__item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    &__menu {
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+  
+        font-family: Roboto-Medium;
+        color: $font-color;
+        text-decoration: none;
+        cursor: pointer;
 
-      font-family: Roboto-Medium;
-      color: $font-color;
-      text-decoration: none;
-      cursor: pointer;
+        &__dropDown {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0.25rem 0.5rem;
+
+          display: none;
+          position: absolute;
+          background-color: $dropdown-background;
+          min-width: 8.75rem;
+          box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+          z-index: 1;
+
+          &__items {
+            @extend .header__nav__menu__item;
+            font-family: Roboto-Regular;
+            padding: 0.35rem 0;
+
+            &:hover {
+              font-family: Roboto-Bold;
+            }
+          }
+        }
+      }
     }
   }
 }
