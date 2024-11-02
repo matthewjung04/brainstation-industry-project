@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import './Tableau.scss'
+import './ProductInspectorTableau.scss'
 
-function Tableau() {
+function ProductInspectorTableau() {
 
   useEffect(() => {
     var divElement = document.getElementById('viz1730420415122');             
@@ -42,4 +42,4 @@ function Tableau() {
   )
 }
 
-export default Tableau;
+export default ProductInspectorTableau;

@@ -1,6 +1,10 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/colors' as *;
 
+#logo-img {
+  width: 10rem;
+}
+
 .header {
   background-color: $header-background;
 
@@ -31,7 +35,7 @@
         align-items: center;
   
         font-family: Roboto-Medium;
-        color: $font-color;
+        color: $alternate-font-color;
         text-decoration: none;
         cursor: pointer;
 

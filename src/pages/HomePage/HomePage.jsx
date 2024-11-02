@@ -23,7 +23,7 @@ function HomePage() {
   return (
     <section className='homepage'>
       <article className='homepage__main'>
-        <h1 className='homepage__main__title'>Please choose one of the following:</h1>
+        <h1 className='homepage__main__title'><sup>1</sup>Please choose one of the following:</h1>
         <div className='homepage__main__buttons'>
           <div className='homepage__main__buttons--consumer'>
             <Link to='/consumer-seller'>
@@ -48,6 +48,7 @@ function HomePage() {
             <p className='homepage__main__buttons__text--product-inspector' id='product-inspector'>{description[1].description}</p>
           </div>
         </div>
+        <p className='footnote'><sup>1</sup>This webapp is only a demonstration and will have limited user selections</p>
         <img src={cartoon} alt='cartoon image' id='cartoon'/>
       </article>
     </section>

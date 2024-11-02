@@ -25,7 +25,7 @@ function Navigation() {
 
   return (
     <section className='header'>
-      <Link to='/'><img src={logo} alt="logo-image"/></Link>
+      <Link to='/'><img src={logo} alt="logo-image" id='logo-img'/></Link>
       <h1 className='header__title'>Amazon Product Review Analysis</h1>
       <article className='header__nav'>
         <div className='header__nav__menu'>

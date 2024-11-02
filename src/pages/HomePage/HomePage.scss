@@ -32,8 +32,14 @@
 #cartoon {
   position:fixed;
   left: 58vw;
-  top: 48vh;
-  width: 36vw;
+  top: 50vh;
+  width: 35vw;
+}
+
+p.footnote {
+  font-family: Roboto-Regular;
+  width: 30vw;
+  margin-top: 75%;
 }
 
 .homepage {
@@ -79,11 +85,11 @@
           font-family: Roboto-Regular;
           color: $alternate-font-color;
           width: 55vw;
-          padding: 0.5rem;
+          padding: 0.75rem;
           margin-left: 1.5rem;
           border-radius: 0.75rem;
 
-          background-color: $font-color;
+          background-color: $header-background;
           z-index: 1;
 
           position: absolute;
@@ -94,10 +100,10 @@
             position: absolute;
             top: 30%;
             right: 100%;
-            margin-top: -0.3rem;
+            margin-top: -0.2rem;
             border-width: 0.9rem;
             border-style: solid;
-            border-color: transparent black transparent transparent;
+            border-color: transparent $header-background transparent transparent;
           }
 
         }
