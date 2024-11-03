@@ -1,0 +1,23 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+
+.user-choice {
+  &__title {
+    font-family: Roboto-Bold;
+    font-size: 32px;
+    margin: 3rem 0 1.5rem 0;
+  }
+
+  &__form {
+    &__label {
+      padding-right: 0.5rem;
+    }
+    &__options{
+      width: 10rem;
+      height: 1.75rem;
+      padding: 0.3rem 0.65rem;
+      border: 1px solid $dropdown-background;
+      border-radius: 8px;
+    }
+  }
+}

@@ -10,3 +10,6 @@ export const description = [
     description: 'This section provides a full analysis on items sold on Amazon using an interactable tableau dashboard'
   }
 ]
+
+/* Backend API URL */
+export const url = import.meta.env.VITE_API_URL || 'http://localhost:5050';

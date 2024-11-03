@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { url } from '../../utils/utils.jsx'
 import './ConsumerSellerTableau.scss'
 
 function ConsumerSellerTableau() {
@@ -13,7 +14,8 @@ function ConsumerSellerTableau() {
       vizElement.style.width='1600px';
       vizElement.style.height='827px';
     } else { 
-      vizElement.style.width='100%';vizElement.style.height='1827px';
+      vizElement.style.width='100%';
+      vizElement.style.height='1827px';
     }                     
     var scriptElement = document.createElement('script');                    
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
@@ -21,10 +23,10 @@ function ConsumerSellerTableau() {
   },[])
  
   return (
-    <>
-      <h1>Tableau Dashboard</h1>
-      <div>
-        <div className='tableauPlaceholder' id='viz1730583989071' style={{position: 'relative'}}>
+    <section className='tableau'>
+      <h1 className='tableau__title'>Tableau Dashboard</h1>
+      <article className='tableau__dashboard'>
+        <div id='viz1730583989071' style={{position: 'relative'}}>
           <noscript>
             <a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;test_test_17305772805390&#47;Dashboard1&#47;1_rss.png' style={{border: 'none'}} /></a>
           </noscript>
@@ -40,8 +42,24 @@ function ConsumerSellerTableau() {
             <param name='filter' value='publish=yes' />
           </object>
         </div>  
-      </div>
-    </>
+      </article>
+      <article className='tableau__notes'>
+        <h2 className='tableau__notes__title'>Notes</h2>
+        <p className='tableau__notes__desc'>
+          A complete analysis of customer product reviews filtered by pros&cons, top reviews, and brand distribution. 
+        </p>
+        <p>
+          To access the tableau source link
+          <a href='https://public.tableau.com/app/profile/bhargav.devarapalli/viz/test_test_17305772805390/Dashboard1?publish=yes' target='_blank'>click here</a>
+           .
+        </p>
+        <p>
+          To access sample data
+          <a href={`${url}/sample`} target='_blank'>click here</a>
+           .
+        </p>
+      </article>
+    </section>
   )
 }
 

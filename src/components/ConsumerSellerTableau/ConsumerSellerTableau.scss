@@ -1,6 +1,37 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/fonts' as *;
 
-.tableauPlaceholder {
-  height: 5rem;
+a {
+  padding-left: 0.25rem;
+}
+
+.tableau {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: Roboto-Medium;
+    font-size: 24px;
+  }
+
+  &__dashboard {
+    width: auto;
+    margin-left:6.5rem;
+  }
+
+  &__notes {
+    width: 50vw;
+    margin: 4rem 0;
+
+    &__title {
+      font-family: Roboto-Regular;
+      font-size: 18px;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $divider;
+    }
+
+    &__desc {
+      font-family: Roboto-Regular;
+    }
+  }
 }

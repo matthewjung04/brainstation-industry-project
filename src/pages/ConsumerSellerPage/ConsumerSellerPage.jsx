@@ -29,7 +29,7 @@ function ConsumerSellerPage() {
   },[data])
 
   return (
-    <>
+    <section className='consumer-seller'>
       <ConsumerSellerInput
         submit={submitForm}
       />
@@ -45,7 +45,7 @@ function ConsumerSellerPage() {
       )}
 
 
-    </>
+    </section>
   )
 }
 
