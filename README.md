@@ -1,4 +1,5 @@
 # Enhancing the Quality of Amazon Reviews
+## November 2024
 
 ## Acknowledgement
 - [Brainstation](https://brainstation.io/)
@@ -20,7 +21,7 @@
 ## Documents
 - [Tableau API](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api.htm?_gl=1*nbp8q6*_ga*MTQzNzk0OTA5LjE3MzAyNDkxNDM.*_ga_8YLN0SNXVS*MTczMDc3Mjc4OS4xNi4xLjE3MzA3NzI4MDQuMC4wLjA.)
 
--[Tableau Embedded API](https://help.tableau.com/current/api/embedding_api/en-us/index.html)
+- [Tableau Embedded API](https://help.tableau.com/current/api/embedding_api/en-us/index.html)
 
 ## Usage
 - To install the project use: `$ npm install`
@@ -88,6 +89,8 @@
 ![Project Tableau](./public/tableau.png)
 
 ## Tech Stack
+- Python (Data Science Libraries)
+- Tableau
 - React, vite, npm
 - node.js
 - express.js
