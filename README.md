@@ -1,5 +1,4 @@
 # Enhancing the Quality of Amazon Reviews
-## November 2024
 
 ## Acknowledgement
 - [Brainstation](https://brainstation.io/)
