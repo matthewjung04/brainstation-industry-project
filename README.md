@@ -1,4 +1,4 @@
-# BrainFlix Project
+# Enhancing the Quality of Amazon Reviews
 
 ## Acknowledgement
 - [Brainstation](https://brainstation.io/)
@@ -78,7 +78,7 @@
   - Style taleau and UI pages using Sass styling
 - Platform: Interactive website that hosts the review insights for public use.
   - Use APIs to create forms for users to input fields to generate selective data
-  
+
 ## Tableau Screenshots
 
 ### Reference Amazon Tableau
