@@ -1,3 +1,41 @@
-.test {
-  width: 5rem;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+a {
+  padding-left: 0.25rem;
+  text-decoration: none;
+}
+
+.monitoring-dashboard {
+  margin-left: 6rem;
+
+  @include large-desktop {
+    margin-left: 8.5rem;
+  }
+
+  &__title {
+    font-family: Roboto-Medium;
+    font-size: 32px;
+    margin: 3rem 0;
+    margin-left: -4rem;
+  }
+
+  &__notes {
+    width: 50vw;
+    margin: 4rem 0;
+    margin-left: -4rem;
+
+    &__title {
+      font-family: Roboto-Regular;
+      font-size: 18px;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $divider;
+    }
+
+    &__desc {
+      font-family: Roboto-Regular;
+    }
+  }
 }

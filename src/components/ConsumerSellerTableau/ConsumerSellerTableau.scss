@@ -1,8 +1,21 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 a {
   padding-left: 0.25rem;
+  text-decoration: none;
+}
+
+.tableau-block {
+  height: 842px;
+  width: 1150px;
+  z-index: 11;
+
+  @include large-desktop {
+    width: 1600px;
+  }
 }
 
 .tableau {
@@ -16,12 +29,12 @@ a {
 
   &__dashboard {
     width: auto;
-    margin-left:6.5rem;
+    margin-left: 6rem;
   }
 
   &__notes {
     width: 50vw;
-    margin: 4rem 0;
+    margin: 1rem 0 3rem 0;
 
     &__title {
       font-family: Roboto-Regular;

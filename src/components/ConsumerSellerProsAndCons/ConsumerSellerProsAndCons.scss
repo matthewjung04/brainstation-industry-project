@@ -1,0 +1,34 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.pros-and-cons {
+
+  &__title {
+    font-family: Roboto-Medium;
+    font-size: 24px;
+  }
+
+  &__image {
+    border: 2px solid $header-background;
+    margin-left: 3rem;
+  }
+
+  &__notes {
+    width: 50vw;
+    margin: 1rem 0 3rem 0;
+
+    &__title {
+      font-family: Roboto-Regular;
+      font-size: 18px;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $divider;
+    }
+
+    &__desc {
+      font-family: Roboto-Regular;
+    }
+  }
+  
+}

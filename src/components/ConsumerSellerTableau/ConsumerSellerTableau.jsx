@@ -6,17 +6,7 @@ function ConsumerSellerTableau() {
 
   useEffect(() => {
     var divElement = document.getElementById('viz1730583989071');                 
-    var vizElement = divElement.getElementsByTagName('object')[0];                    
-    if ( divElement.offsetWidth > 800 ) { 
-      vizElement.style.width='1600px';
-      vizElement.style.height='827px';
-    } else if ( divElement.offsetWidth > 500 ) { 
-      vizElement.style.width='1600px';
-      vizElement.style.height='827px';
-    } else { 
-      vizElement.style.width='100%';
-      vizElement.style.height='1827px';
-    }                     
+    var vizElement = divElement.getElementsByTagName('object')[0];                                    
     var scriptElement = document.createElement('script');                    
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
     vizElement.parentNode.insertBefore(scriptElement, vizElement);   
@@ -30,7 +20,7 @@ function ConsumerSellerTableau() {
           <noscript>
             <a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;test_test_17305772805390&#47;Dashboard1&#47;1_rss.png' style={{border: 'none'}} /></a>
           </noscript>
-          <object className='tableauViz'  style={{display: 'none'}}>
+          <object className='tableauViz tableau-block'  style={{display: 'none'}}>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
             <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
             <param name='name' value='test_test_17305772805390&#47;Dashboard1' />
@@ -48,15 +38,13 @@ function ConsumerSellerTableau() {
         <p className='tableau__notes__desc'>
           A complete analysis of customer product reviews filtered by pros&cons, top reviews, and brand distribution. 
         </p>
-        <p>
+        <p className='tableau__notes__desc'>
           To access the tableau source link
-          <a href='https://public.tableau.com/app/profile/bhargav.devarapalli/viz/test_test_17305772805390/Dashboard1?publish=yes' target='_blank'>click here</a>
-           .
+          <a href='https://public.tableau.com/app/profile/bhargav.devarapalli/viz/test_test_17305772805390/Dashboard1?publish=yes' target='_blank'>click here.</a>
         </p>
-        <p>
+        <p className='tableau__notes__desc'>
           To access sample data
-          <a href={`${url}/sample`} target='_blank'>click here</a>
-           .
+          <a href={`${url}/sample`} target='_blank'>click here.</a>
         </p>
       </article>
     </section>
